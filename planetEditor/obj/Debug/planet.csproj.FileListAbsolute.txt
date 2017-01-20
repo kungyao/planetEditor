@@ -1,0 +1,6 @@
+C:\Users\user\Desktop\gamelab\移植\planet\bin\Debug\planet.exe.config
+C:\Users\user\Desktop\gamelab\移植\planet\obj\Debug\planet.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\gamelab\移植\planet\bin\Debug\planet.exe
+C:\Users\user\Desktop\gamelab\移植\planet\bin\Debug\planet.pdb
+C:\Users\user\Desktop\gamelab\移植\planet\obj\Debug\planet.exe
+C:\Users\user\Desktop\gamelab\移植\planet\obj\Debug\planet.pdb
