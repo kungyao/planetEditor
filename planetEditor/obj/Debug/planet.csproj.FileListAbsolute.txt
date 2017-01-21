@@ -4,3 +4,6 @@ C:\Users\user\Desktop\gamelab\移植\planet\bin\Debug\planet.exe
 C:\Users\user\Desktop\gamelab\移植\planet\bin\Debug\planet.pdb
 C:\Users\user\Desktop\gamelab\移植\planet\obj\Debug\planet.exe
 C:\Users\user\Desktop\gamelab\移植\planet\obj\Debug\planet.pdb
+C:\Users\user\Documents\GitHub\planetEditor\planetEditor\bin\Debug\planet.exe.config
+C:\Users\user\Documents\GitHub\planetEditor\planetEditor\obj\Debug\planet.exe
+C:\Users\user\Documents\GitHub\planetEditor\planetEditor\obj\Debug\planet.pdb

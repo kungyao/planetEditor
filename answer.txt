@@ -11,18 +11,31 @@ class是可以繼承的struct，儲存的是位址。
 內部只能宣告方法，可以被多重繼承(如繼承兩個interface)。
 
 5. 什麼是Polymorphism 我在哪使用了Polymorphism
-多型態。(有operator的地方)
-object.cpp
-Object& Object::operator=(const Object & src)
+多型態。
+mian.cpp的Lion和Plant
 
 6. 什麼是template
-可以依據給予的值的資料型別 宣告資料
+可以依據給予的值的資料型別 宣告變數
 
 7. Planet::Planet(const Planet & src)將會產生什麼問題
-planet建構時需要傳入一個planet物件，所以會無法使用。
+呼叫
+Planet::Planet(const Planet & src) : Object(src.getName()), _object_ptrs() 
+{
+	
+   for (const auto& sop : src._object_ptrs) 
+   {
+		
+      _object_ptrs.push_back(sop);
+	
+   }
+
+}
+sop宣告為src._object_ptrs的資料型別，並指向src._object_ptrs，
+然後一個planet的object移動到另一個planet
 
 8. std::shared_ptr是什麼
 可以讓多個變數共用一塊記憶體，當變數不被使用時，記憶體會自動釋放
 
-9. 如果忘記釋放記憶體會發生什麼事 C#會發生相同的事嗎
-不會，C#會自動管理記憶體，自動將沒有被使用的變數、物件等的記憶體釋放。
+9. 如果忘記釋放記憶體會發生什麼事? C#會發生相同的事嗎?
+ a. 會造成memory leak，也就是記憶體霸佔當前的位置，造成別人無法使用。
+ b. 不會，C#會自動管理記憶體，自動將沒有被使用的變數、物件等的記憶體釋放。
