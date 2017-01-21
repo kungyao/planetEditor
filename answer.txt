@@ -31,7 +31,7 @@ Planet::Planet(const Planet & src) : Object(src.getName()), _object_ptrs()
 
 }
 sop宣告為src._object_ptrs的資料型別，並指向src._object_ptrs，
-然後一個planet的object移動到另一個planet
+然後一個planet的object移動到另一個planet，做初始化
 
 8. std::shared_ptr是什麼
 可以讓多個變數共用一塊記憶體，當變數不被使用時，記憶體會自動釋放
