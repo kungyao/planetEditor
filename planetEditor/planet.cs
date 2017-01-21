@@ -63,7 +63,7 @@ namespace planet
             Console.WriteLine("alive");
             for (int i = 0; i < _object_ptrs.Count; i++)
                 Console.WriteLine(_object_ptrs[i].getID() + " " + _object_ptrs[i].getType() + " " + _object_ptrs[i].getSpecies() + " " + _object_ptrs[i].getName());
-            Console.WriteLine("\ncan creat");
+            Console.WriteLine("\ncan add");
             for (int i = 0; i < _sv_ct_creature.Count; i++)
                 Console.WriteLine(_sv_ct_creature[i].get_type() + " " + _sv_ct_creature[i].get_species());
         }

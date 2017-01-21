@@ -1,10 +1,28 @@
 1. 什麼是Class
+class是可以繼承的struct，儲存的是位址。
 
 2. 什麼是Constructor
+建構，建立一個物件時會自動呼叫的函式，做初始化的動作。
+
 3. 什麼是Destructor
+解構，當物件不再被使用時會被呼叫，釋放記憶體。
+
 4. 什麼是Interface
+內部只能宣告方法，可以被多重繼承(如繼承兩個interface)。
+
 5. 什麼是Polymorphism 我在哪使用了Polymorphism
+多型態。(有operator的地方)
+object.cpp
+Object& Object::operator=(const Object & src)
+
 6. 什麼是template
+可以依據給予的值的資料型別 宣告資料
+
 7. Planet::Planet(const Planet & src)將會產生什麼問題
+planet建構時需要傳入一個planet物件，所以會無法使用。
+
 8. std::shared_ptr是什麼
+可以讓多個變數共用一塊記憶體，當變數不被使用時，記憶體會自動釋放
+
 9. 如果忘記釋放記憶體會發生什麼事 C#會發生相同的事嗎
+不會，C#會自動管理記憶體，自動將沒有被使用的變數、物件等的記憶體釋放。
