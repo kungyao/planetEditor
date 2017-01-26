@@ -30,7 +30,7 @@ namespace planet
                 throw new Exception("Radius should be greater than 0.0f.");
         }
 
-        public void addnewcreature(sv_species p)
+        public void addNewCreature(sv_species p)
         {
             if (_chsp(p.get_species()))
                 throw new Exception("name duplicate!");
