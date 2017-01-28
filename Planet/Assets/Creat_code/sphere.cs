@@ -10,6 +10,7 @@ public class sphere : MonoBehaviour
         resolution = 20;
         generateSphere();
     }
+
     //private MeshFilter filter;
     private Mesh mesh;
     private Material mat;
@@ -34,12 +35,11 @@ public class sphere : MonoBehaviour
         int nbLong, nbLat;
         nbLat = nbLong = resolution;
 
-        WaitForSeconds wait = new WaitForSeconds(0.05f);
         mesh = new Mesh();
         mesh = GetComponent<MeshFilter>().mesh;
         mesh.name = "Planet mesh";
         //設定球的element
-        mat = Resources.Load("standard", typeof(Material)) as Material;
+        mat = Resources.Load("yellow(maybe)", typeof(Material)) as Material;
         GetComponent<MeshRenderer>().material = mat;
 
         vertices = new Vector3[(nbLong + 1) * nbLat + 2];

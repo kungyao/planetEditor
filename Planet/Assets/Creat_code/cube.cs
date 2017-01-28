@@ -7,12 +7,12 @@ public class cube : MonoBehaviour
     public int xSize, ySize, zSize;
     private Mesh mesh;
     private Vector3[] vertices;
-    private void Awake() { StartCoroutine(Generate()); }
-    private IEnumerator Generate()
+    private void Reset() { Generate(); }
+    private void OnValidate() { Generate(); }
+    private void Generate()
     {
         GetComponent<MeshFilter>().mesh = mesh = new Mesh();
         mesh.name = "Procedural Cube";
-        WaitForSeconds wait = new WaitForSeconds(0.05f);
         int cornerVertices = 8;
         int edgeVertices = (xSize + ySize + zSize - 3) * 4;
         int faceVertices = (
@@ -25,7 +25,6 @@ public class cube : MonoBehaviour
         {
             vertices[v++] = new Vector3(x, 0, 0);
         }
-            yield return wait;
     }
     private void OnDrawGizmos()
     {
