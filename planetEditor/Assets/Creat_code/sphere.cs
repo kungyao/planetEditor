@@ -122,7 +122,7 @@ public class Sphere : MonoBehaviour
         mesh.triangles = triangles;
 
         mesh.RecalculateBounds();
-        mesh.Optimize();
+        ;
     }
     /*private void findPosition()
     {

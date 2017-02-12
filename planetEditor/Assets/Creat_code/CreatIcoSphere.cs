@@ -19,7 +19,12 @@ public class CreateIcoSphere : MonoBehaviour
             lastUsedCam = cam;
 
         GameObject sphere = new GameObject();
+
+        MeshFilter filter = (MeshFilter)sphere.AddComponent(typeof(MeshFilter));
+        sphere.AddComponent(typeof(MeshRenderer));
+
         sphere.AddComponent<IcoSphere>();
+
         sphere.name = "IcoSphere";
         sphere.transform.position = cam.transform.position + cam.transform.forward * 5.0f;
 

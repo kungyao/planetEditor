@@ -94,6 +94,6 @@ public class Torus : MonoBehaviour
         mesh.triangles = triangles;
 
         mesh.RecalculateBounds();
-        mesh.Optimize();
+        ;
     }
 }

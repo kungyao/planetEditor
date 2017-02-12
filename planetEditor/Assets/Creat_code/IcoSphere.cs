@@ -3,25 +3,11 @@
 using System.Collections;
 using System.Collections.Generic;
 
-[RequireComponent(typeof(MeshFilter), typeof(MeshRenderer))]
 public class IcoSphere : MonoBehaviour
 {
-    // Not implemented
-    /*public enum AnchorPoint
-    {
-        TopLeft,
-        TopHalf,
-        TopRight,
-        RightHalf,
-        BottomRight,
-        BottomHalf,
-        BottomLeft,
-        LeftHalf,
-        Center
-    }*/
 
-    public float radius = 0.5f;
-    private int recursionLevel = 1;
+    public float radius;
+    public int recursionLevel;
     private Material mat;
     //private AnchorPoint anchor = AnchorPoint.Center;
     //public bool addCollider = false;
@@ -31,13 +17,14 @@ public class IcoSphere : MonoBehaviour
 
     private void Reset()
     {
-        radius = 5;
+        radius = 1;
         recursionLevel = 3;
         CreatISphere();
     }
 
     private void OnValidate()
     {
+        //gameObject.GetComponent<terrain_edit>().set_radius();
         CreatISphere();
         recursionLevel = Mathf.Clamp(recursionLevel, 1, 3);
     }
@@ -94,20 +81,6 @@ public class IcoSphere : MonoBehaviour
     private void CreatISphere()
     {
 
-        /*MeshFilter filter = (MeshFilter)sphere.AddComponent(typeof(MeshFilter));
-        sphere.AddComponent(typeof(MeshRenderer)); CreatIcoSphere*/
-
-        /*string anchorId;
-        switch (anchor)
-        {
-            case AnchorPoint.Center:
-            default:
-                anchorId = "C";
-                break;
-        }*/
-
-        /*string sphereAssetName = sphere.name + recursionLevel + anchorId + ".asset";
-        Mesh mesh = (Mesh)AssetDatabase.LoadAssetAtPath("Assets/Editor/" + sphereAssetName, typeof(Mesh));*/
         Mesh mesh = new Mesh();
 
         if (true)
@@ -224,17 +197,8 @@ public class IcoSphere : MonoBehaviour
             mesh.normals = normales;
 
             mesh.RecalculateBounds();
-            mesh.Optimize();
-
-            /*AssetDatabase.CreateAsset(mesh, "Assets/Editor/" + sphereAssetName);
-            AssetDatabase.SaveAssets();*/
         }
 
         mesh.RecalculateBounds();
-
-        /*if (addCollider)
-            sphere.AddComponent(typeof(BoxCollider));*/
-
-        //Selection.activeObject = sphere;
     }
 }
